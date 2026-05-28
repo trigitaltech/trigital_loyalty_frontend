@@ -1,7 +1,7 @@
 /* e:\claude_repos\trigital\openloyalty-master\frontend-react\src\services\api.ts */
 import { mockApi } from './mockApi';
 
-const DEFAULT_API_URL = 'http://localhost:3000';
+const DEFAULT_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 export const getApiUrl = (): string => {
   return localStorage.getItem('ol_api_url') || DEFAULT_API_URL;
