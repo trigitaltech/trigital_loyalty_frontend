@@ -1,0 +1,91 @@
+/* e:\claude_repos\trigital\openloyalty-master\frontend-react\src\styles\variables.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-title: 'Outfit', var(--font-sans);
+
+  /* Core Dark Mode Colors (Global Slate Theme) */
+  --bg-app: #090b11;
+  --bg-card: rgba(18, 22, 33, 0.7);
+  --bg-input: #151a26;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(99, 102, 241, 0.15);
+  
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  
+  /* HSL Tailored Colors for Roles */
+  
+  /* 1. Admin Cockpit (Slate/Indigo/Purple) */
+  --admin-primary: 250; /* indigo-like base */
+  --admin-primary-hex: #6366f1;
+  --admin-accent: 262;  /* violet/purple */
+  --admin-accent-hex: #a855f7;
+  
+  /* 2. Customer Member Portal (Deep Forest/Emerald/Amber Gold) */
+  --customer-primary: 142; /* emerald green */
+  --customer-primary-hex: #10b981;
+  --customer-accent: 45;   /* amber gold */
+  --customer-accent-hex: #f59e0b;
+  
+  /* 3. POS Merchant Terminal (Ocean/Teal/Graphite) */
+  --seller-primary: 172; /* active teal */
+  --seller-primary-hex: #0d9488;
+  --seller-accent: 199;  /* sky blue */
+  --seller-accent-hex: #0ea5e9;
+
+  /* Glassmorphism Defaults */
+  --glass-bg: rgba(18, 22, 33, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-blur: 16px;
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-info: #3b82f6;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-xxl: 3rem;
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Theme overrides if toggled */
+[data-theme="light"] {
+  --bg-app: #f9fafb;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-input: #f3f4f6;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-glow: rgba(99, 102, 241, 0.1);
+  
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+  
+  --admin-primary-hex: #4f46e5;
+  --customer-primary-hex: #059669;
+  --seller-primary-hex: #0f766e;
+}
