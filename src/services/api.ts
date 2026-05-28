@@ -14,7 +14,7 @@ export const setApiUrl = (url: string): void => {
 // Check if we should enforce mock mode explicitly
 export const isEnforcedMock = (): boolean => {
   const stored = localStorage.getItem('ol_use_mock');
-  return stored === null ? true : stored === 'true'; // Default to true for robust visual previewing
+  return stored === null ? false : stored === 'true'; // Default to false — use real backend
 };
 
 export const setEnforceMock = (value: boolean): void => {
