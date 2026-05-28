@@ -1,4 +1,3 @@
-/* e:\claude_repos\trigital\openloyalty-master\frontend-react\src\layouts\Layouts.tsx */
 import React, { useEffect } from 'react';
 import { useNavigate, useLocation, Link, Outlet } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -7,6 +6,7 @@ import {
   BarChart3, Users, Settings2, Gift, Sliders,
   Wallet, Tag, History, Calculator, ClipboardList, Menu, X
 } from 'lucide-react';
+import suryaLogo from '../assets/Surya-Group-Logo.png';
 
 // --- ADMIN LAYOUT ---
 export const AdminLayout: React.FC = () => {
@@ -37,7 +37,7 @@ export const AdminLayout: React.FC = () => {
       <aside style={sidebarStyle} className={`admin-sidebar-nav glass-panel ${mobileOpen ? 'active' : ''}`}>
         <div style={sidebarHeaderStyle}>
           <div style={logoWrapperStyle}>
-            <Shield size={20} color="var(--admin-primary-hex)" />
+            <img src={suryaLogo} alt="Surya Logo" style={{ height: '24px', borderRadius: '4px' }} />
             <span style={logoTextStyle}>Admin Cockpit</span>
           </div>
           <button style={mobileCloseBtnStyle} className="admin-sidebar-close-btn" onClick={() => setMobileOpen(false)}>
@@ -124,8 +124,8 @@ export const CustomerLayout: React.FC = () => {
   return (
     <div style={customerContainerStyle}>
       <header style={customerHeaderStyle} className="customer-navbar-header glass-panel">
-        <div style={logoWrapperStyle}>
-          <User size={18} color="var(--customer-primary-hex)" />
+        <div style={{ ...logoWrapperStyle, alignItems: 'center' }}>
+          <img src={suryaLogo} alt="Surya Logo" style={{ height: '24px', borderRadius: '4px' }} />
           <span style={customerLogoTextStyle}>Member Portal</span>
         </div>
 
@@ -179,9 +179,9 @@ export const SellerLayout: React.FC = () => {
   return (
     <div style={sellerContainerStyle}>
       <header style={sellerHeaderStyle} className="seller-navbar-header glass-panel">
-        <div style={logoWrapperStyle}>
-          <Landmark size={20} color="var(--seller-primary-hex)" />
-          <span style={sellerLogoTextStyle}>POS Seller Terminal</span>
+        <div style={{ ...logoWrapperStyle, alignItems: 'center' }}>
+          <img src={suryaLogo} alt="Surya Logo" style={{ height: '24px', borderRadius: '4px' }} />
+          <span style={sellerLogoTextStyle}>POS Terminal</span>
         </div>
 
         <div style={sellerNavStyle} className="seller-nav-links">

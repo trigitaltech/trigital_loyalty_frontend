@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Shield, User, Landmark, Database, HelpCircle, ArrowRight } from 'lucide-react';
+import suryaLogo from '../assets/Surya-Group-Logo.png';
 
 export const UnifiedHub: React.FC = () => {
   const navigate = useNavigate();
@@ -24,8 +25,9 @@ export const UnifiedHub: React.FC = () => {
       {/* Top Banner Control Panel */}
       <div style={topBarStyle}>
         <div style={logoAreaStyle}>
-          <span style={logoTextAccentStyle}>AFRICAN</span>
-          <span style={logoTextSubStyle}>LOYALTY</span>
+          <img src={suryaLogo} alt="Surya Group Logo" style={{ height: '32px', marginRight: '0.5rem', borderRadius: '4px' }} />
+          <span style={logoTextAccentStyle}>SURYA</span>
+          <span style={logoTextSubStyle}>GROUP</span>
           <span style={badgeStyle}>v2.0 React</span>
         </div>
 
@@ -51,7 +53,7 @@ export const UnifiedHub: React.FC = () => {
       {/* Content Center */}
       <div style={contentAreaStyle}>
         <div style={headerAreaStyle}>
-          <h1 style={titleStyle}>africanLoyalty Cockpit Hub</h1>
+          <h1 style={titleStyle}>Surya Group Loyalty Cockpit</h1>
           <p style={subtitleStyle}>
             Welcome to the fully upgraded React & TypeScript loyalty engine. Choose a cockpit below to manage rewards, credit purchases, and claim coupons.
           </p>
@@ -140,7 +142,7 @@ export const UnifiedHub: React.FC = () => {
       </div>
 
       <div style={footerStyle}>
-        <HelpCircle size={14} /> africanLoyalty platform powered by React 18, Vite & NestJS TypeScript modules.
+        <HelpCircle size={14} /> Surya Group Loyalty platform powered by React 18, Vite & NestJS TypeScript modules.
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { ArrowLeft, Shield, User, Landmark, Key, Mail } from 'lucide-react';
+import suryaLogo from '../assets/Surya-Group-Logo.png';
 
 export const Login: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -97,11 +98,12 @@ export const Login: React.FC = () => {
         <div style={{ ...loginCardStyle, borderTop: `4px solid ${getThemeColor()}` }} className="glass-panel animate-fade-in">
           {/* Header */}
           <div style={cardHeaderStyle}>
+            <img src={suryaLogo} alt="Surya Group Logo" style={{ height: '48px', margin: '0 auto 1.5rem', display: 'block', borderRadius: '6px' }} />
             <div style={{ ...iconContainerStyle, background: `${getThemeColor()}15` }}>
               {getRoleIcon()}
             </div>
             <h2 style={cardTitleStyle}>{getRoleTitle()} Login</h2>
-            <p style={cardSubtitleStyle}>Enter your africanLoyalty account credentials to proceed.</p>
+            <p style={cardSubtitleStyle}>Enter your Surya Group account credentials to proceed.</p>
           </div>
 
           {/* Form */}
