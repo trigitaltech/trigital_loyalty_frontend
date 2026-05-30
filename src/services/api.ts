@@ -103,6 +103,8 @@ export const api = {
         localStorage.setItem('ol_refresh_token', res.refresh_token);
         localStorage.setItem('ol_user_role', role);
         localStorage.setItem('ol_username', username);
+        if (res.name) localStorage.setItem('ol_name', res.name);
+        if (res.posLocation) localStorage.setItem('ol_pos_location', res.posLocation);
         return res;
       }
       throw e;
@@ -114,6 +116,8 @@ export const api = {
     localStorage.removeItem('ol_refresh_token');
     localStorage.removeItem('ol_user_role');
     localStorage.removeItem('ol_username');
+    localStorage.removeItem('ol_name');
+    localStorage.removeItem('ol_pos_location');
   },
 
   // --- ANALYTICS ---
@@ -233,6 +237,31 @@ export const api = {
       return await request<any[]>('/api/admin/segment', 'GET');
     } catch (e) {
       return await mockApi.getSegments();
+    }
+  },
+
+  // --- SELLERS / POS ---
+  getSellers: async () => {
+    try {
+      return await request<any[]>('/api/admin/seller', 'GET');
+    } catch (e) {
+      return await mockApi.getSellers();
+    }
+  },
+
+  createSeller: async (sellerData: { username: string; password?: string; name: string; posLocation: string }) => {
+    try {
+      return await request<any>('/api/admin/seller', 'POST', sellerData);
+    } catch (e) {
+      return await mockApi.createSeller(sellerData);
+    }
+  },
+
+  toggleSeller: async (id: string) => {
+    try {
+      return await request<any>(`/api/admin/seller/${id}/toggle`, 'POST');
+    } catch (e) {
+      return await mockApi.toggleSeller(id);
     }
   }
 };

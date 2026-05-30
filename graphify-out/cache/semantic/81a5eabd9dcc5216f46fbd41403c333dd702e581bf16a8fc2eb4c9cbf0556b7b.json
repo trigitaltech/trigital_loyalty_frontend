@@ -1,0 +1,1 @@
+{"nodes": [{"id": "package_json", "label": "Project Manifest and Dependencies", "file_type": "document", "source_file": "package.json", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null, "rationale": "Specifies dependencies including React 19, Vite 8, Lucide React, and React Router Dom 7."}], "edges": [], "hyperedges": []}

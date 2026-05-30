@@ -7,6 +7,7 @@ import {
   Wallet, Tag, History, Calculator, ClipboardList, Menu, X
 } from 'lucide-react';
 import suryaLogo from '../assets/Surya-Group-Logo.png';
+import { ThemeToggle } from '../components/ThemeToggle';
 
 // --- ADMIN LAYOUT ---
 export const AdminLayout: React.FC = () => {
@@ -26,6 +27,7 @@ export const AdminLayout: React.FC = () => {
   const menuItems = [
     { name: 'Dashboard', path: '/admin', icon: <BarChart3 size={18} /> },
     { name: 'Loyalty Members', path: '/admin/customers', icon: <Users size={18} /> },
+    { name: 'Sellers / POS', path: '/admin/sellers', icon: <Landmark size={18} /> },
     { name: 'Earning Rules', path: '/admin/rules', icon: <Settings2 size={18} /> },
     { name: 'Rewards Campaigns', path: '/admin/campaigns', icon: <Gift size={18} /> },
     { name: 'Customer Segments', path: '/admin/segments', icon: <Sliders size={18} /> },
@@ -90,7 +92,10 @@ export const AdminLayout: React.FC = () => {
             </button>
             <h2 style={headerTitleStyle}>System Management Platform</h2>
           </div>
-          <Link to="/" style={hubLinkStyle}><Home size={16} /> Cockpit Hub</Link>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <ThemeToggle />
+            <Link to="/" style={hubLinkStyle}><Home size={16} /> Cockpit Hub</Link>
+          </div>
         </header>
 
         <main style={bodyContentStyle}>
@@ -150,6 +155,7 @@ export const CustomerLayout: React.FC = () => {
         </nav>
 
         <div style={customerActionsStyle}>
+          <ThemeToggle />
           <Link to="/" style={hubLinkStyle}><Home size={14} /> Hub</Link>
           <button onClick={logout} style={customerLogoutBtnStyle} aria-label="Logout"><LogOut size={16} /></button>
         </div>
@@ -181,7 +187,12 @@ export const SellerLayout: React.FC = () => {
       <header style={sellerHeaderStyle} className="seller-navbar-header glass-panel">
         <div style={{ ...logoWrapperStyle, alignItems: 'center' }}>
           <img src={suryaLogo} alt="Surya Logo" style={{ height: '24px', borderRadius: '4px' }} />
-          <span style={sellerLogoTextStyle}>POS Terminal</span>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <span style={sellerLogoTextStyle}>POS Terminal</span>
+            <span style={{ fontSize: '0.7rem', color: 'var(--seller-primary-hex)', fontWeight: 600 }}>
+              Cashier: {user.username} {user.posLocation ? `(${user.posLocation})` : ''}
+            </span>
+          </div>
         </div>
 
         <div style={sellerNavStyle} className="seller-nav-links">
@@ -210,6 +221,7 @@ export const SellerLayout: React.FC = () => {
         </div>
 
         <div style={customerActionsStyle}>
+          <ThemeToggle />
           <Link to="/" style={hubLinkStyle}><Home size={14} /> Hub</Link>
           <button onClick={logout} style={customerLogoutBtnStyle} aria-label="Logout"><LogOut size={16} /></button>
         </div>

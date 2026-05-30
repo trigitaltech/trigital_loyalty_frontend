@@ -242,3 +242,35 @@ export const INITIAL_SEGMENTS: Segment[] = [
     customerCount: 1
   }
 ];
+
+export interface Seller {
+  id: string;
+  username: string;
+  password?: string;
+  name: string;
+  posLocation: string;
+  joinedAt: string;
+  active: boolean;
+}
+
+export const INITIAL_SELLERS: Seller[] = [
+  {
+    id: 'seller-1',
+    username: 'seller',
+    password: 'open',
+    name: 'Default Cashier',
+    posLocation: 'Surya HQ Flagship',
+    joinedAt: '2026-05-01T08:00:00Z',
+    active: true
+  },
+  {
+    id: 'seller-2',
+    username: 'surya_cashier_1',
+    password: 'open',
+    name: 'Rohan Sharma',
+    posLocation: 'Surya Outlet North',
+    joinedAt: '2026-05-10T10:00:00Z',
+    active: true
+  }
+];
+

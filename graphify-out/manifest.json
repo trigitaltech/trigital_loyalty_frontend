@@ -1,0 +1,182 @@
+{
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\eslint.config.js": {
+    "mtime": 1779787716.7246425,
+    "ast_hash": "0355276bc79439afe3c53e3a2470ca1e",
+    "semantic_hash": "0355276bc79439afe3c53e3a2470ca1e"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\package.json": {
+    "mtime": 1779787785.4660516,
+    "ast_hash": "c9b3bd341835942f6ccf9ece4ca68936",
+    "semantic_hash": "c9b3bd341835942f6ccf9ece4ca68936"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\tsconfig.app.json": {
+    "mtime": 1779787945.7237196,
+    "ast_hash": "0ef51b1f2e3c5fa8e544c471250f3315",
+    "semantic_hash": "0ef51b1f2e3c5fa8e544c471250f3315"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\tsconfig.json": {
+    "mtime": 1779787716.7605283,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": "a3d39fa780ebff65444de257f291ce6c"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\tsconfig.node.json": {
+    "mtime": 1779787716.7665484,
+    "ast_hash": "70bdd0a673bcfc0e828080b306e7c680",
+    "semantic_hash": "70bdd0a673bcfc0e828080b306e7c680"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\vite.config.ts": {
+    "mtime": 1779787716.8895476,
+    "ast_hash": "88439104b3c207f17d33ef3160e3b080",
+    "semantic_hash": "88439104b3c207f17d33ef3160e3b080"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\App.tsx": {
+    "mtime": 1779787906.8713992,
+    "ast_hash": "268340042ed14c06b5fb7899a303ddd1",
+    "semantic_hash": "268340042ed14c06b5fb7899a303ddd1"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\main.tsx": {
+    "mtime": 1779787914.244895,
+    "ast_hash": "70ecb2c3e25c61e4f1e477ca2d3c2c79",
+    "semantic_hash": "70ecb2c3e25c61e4f1e477ca2d3c2c79"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\components\\Modal.tsx": {
+    "mtime": 1779787794.2726512,
+    "ast_hash": "8f0cc78ef0da0503961e13daa63bb371",
+    "semantic_hash": "8f0cc78ef0da0503961e13daa63bb371"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\components\\Toast.tsx": {
+    "mtime": 1779787789.442469,
+    "ast_hash": "a2ff05e41e6f730dc38a19926534e36f",
+    "semantic_hash": "a2ff05e41e6f730dc38a19926534e36f"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\context\\AuthContext.tsx": {
+    "mtime": 1779787774.2174115,
+    "ast_hash": "ab6a1a4a4e8e327b8b2d0f507129db8c",
+    "semantic_hash": "ab6a1a4a4e8e327b8b2d0f507129db8c"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\layouts\\Layouts.tsx": {
+    "mtime": 1779968237.4622982,
+    "ast_hash": "e541121b2528a8338d89373ba843f66b",
+    "semantic_hash": "e541121b2528a8338d89373ba843f66b"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\pages\\Login.tsx": {
+    "mtime": 1779968230.899652,
+    "ast_hash": "3d028757323cb8242ba900d8ff22c9a2",
+    "semantic_hash": "3d028757323cb8242ba900d8ff22c9a2"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\pages\\UnifiedHub.tsx": {
+    "mtime": 1779968222.6359115,
+    "ast_hash": "b972ea496ee70070c45a0497c4607681",
+    "semantic_hash": "b972ea496ee70070c45a0497c4607681"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\pages\\admin\\Campaigns.tsx": {
+    "mtime": 1779787847.9421086,
+    "ast_hash": "14f5743e78a54addb1106b841236f6c7",
+    "semantic_hash": "14f5743e78a54addb1106b841236f6c7"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\pages\\admin\\Customers.tsx": {
+    "mtime": 1779859066.9829004,
+    "ast_hash": "2e4e456f18c9dfe58a3ab411d3419a05",
+    "semantic_hash": "2e4e456f18c9dfe58a3ab411d3419a05"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\pages\\admin\\Dashboard.tsx": {
+    "mtime": 1779787827.7647898,
+    "ast_hash": "4166bd74ce3bc7591b8ca5aee6fad981",
+    "semantic_hash": "4166bd74ce3bc7591b8ca5aee6fad981"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\pages\\admin\\EarningRules.tsx": {
+    "mtime": 1779787841.150071,
+    "ast_hash": "531a5bff836b67ff495b36886553176f",
+    "semantic_hash": "531a5bff836b67ff495b36886553176f"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\pages\\admin\\Segments.tsx": {
+    "mtime": 1779787852.7109346,
+    "ast_hash": "82505750c74d4ed3d04245a5f97a1687",
+    "semantic_hash": "82505750c74d4ed3d04245a5f97a1687"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\pages\\customer\\Catalog.tsx": {
+    "mtime": 1779787872.5471947,
+    "ast_hash": "32f0fc9f1fc0398df56a5bcd96beca48",
+    "semantic_hash": "32f0fc9f1fc0398df56a5bcd96beca48"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\pages\\customer\\Dashboard.tsx": {
+    "mtime": 1779787863.6122217,
+    "ast_hash": "68279e42f9f331a87de90c8afac0aa59",
+    "semantic_hash": "68279e42f9f331a87de90c8afac0aa59"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\pages\\customer\\Transactions.tsx": {
+    "mtime": 1779787876.7178144,
+    "ast_hash": "9e852c623a670a49aca18dca14e33365",
+    "semantic_hash": "9e852c623a670a49aca18dca14e33365"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\pages\\seller\\Terminal.tsx": {
+    "mtime": 1779859059.2764997,
+    "ast_hash": "145ba8ca22d17dece002b8f005ba66dc",
+    "semantic_hash": "145ba8ca22d17dece002b8f005ba66dc"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\pages\\seller\\Transactions.tsx": {
+    "mtime": 1779787894.988195,
+    "ast_hash": "4327ed2affef2b49f8d491bd3119aafc",
+    "semantic_hash": "4327ed2affef2b49f8d491bd3119aafc"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\services\\api.ts": {
+    "mtime": 1779968394.3313048,
+    "ast_hash": "1fe34e23e495be651d378f1fa96448ce",
+    "semantic_hash": "1fe34e23e495be651d378f1fa96448ce"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\services\\mockApi.ts": {
+    "mtime": 1779787764.4627004,
+    "ast_hash": "100b6a0c4f321adab023c11494d670d1",
+    "semantic_hash": "100b6a0c4f321adab023c11494d670d1"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\services\\mockData.ts": {
+    "mtime": 1779787757.8267791,
+    "ast_hash": "411fd9510420ac1557a5d5f753235e09",
+    "semantic_hash": "411fd9510420ac1557a5d5f753235e09"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\index.html": {
+    "mtime": 1779968208.8088243,
+    "ast_hash": "e20aff19316aae37d63d3d91f8931068",
+    "semantic_hash": "e20aff19316aae37d63d3d91f8931068"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\README.md": {
+    "mtime": 1779787716.7795477,
+    "ast_hash": "f6e3faf55d738cf2affe1b44195f27cf",
+    "semantic_hash": "f6e3faf55d738cf2affe1b44195f27cf"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\public\\favicon.svg": {
+    "mtime": 1779787716.8165853,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": "7e840862161341271697daa99a40d76b"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\public\\icons.svg": {
+    "mtime": 1779787716.834722,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": "3b4fcfcf393eca4d264dca4a4663bc37"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\public\\Surya-Group-Logo.png": {
+    "mtime": 1779961226.5660899,
+    "ast_hash": "3a3a0e2b107949880ee7bf28abbe474c",
+    "semantic_hash": "3a3a0e2b107949880ee7bf28abbe474c"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\assets\\hero.png": {
+    "mtime": 1779787716.7956223,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": "aead493361b27e7510691c5d7072dfc1"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\assets\\react.svg": {
+    "mtime": 1779787716.852458,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": "f0402b67b6ce880f65666bb49e841696"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\assets\\Surya-Group-Logo.png": {
+    "mtime": 1779961226.5660899,
+    "ast_hash": "3a3a0e2b107949880ee7bf28abbe474c",
+    "semantic_hash": "3a3a0e2b107949880ee7bf28abbe474c"
+  },
+  "E:\\claude_repos\\trigital\\openloyalty\\frontend-react\\src\\assets\\vite.svg": {
+    "mtime": 1779787716.8688955,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": "9960a24288958394ac50e57ff638b036"
+  }
+}

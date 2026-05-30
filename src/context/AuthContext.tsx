@@ -6,6 +6,8 @@ export interface User {
   username: string;
   role: 'admin' | 'customer' | 'seller';
   id?: string;
+  posLocation?: string;
+  name?: string;
 }
 
 export interface Toast {
@@ -19,6 +21,8 @@ interface AuthContextType {
   loading: boolean;
   toasts: Toast[];
   demoMode: boolean;
+  theme: 'light' | 'dark';
+  toggleTheme: () => void;
   login: (username: string, password: string, role: 'admin' | 'customer' | 'seller') => Promise<void>;
   logout: () => void;
   showToast: (message: string, type?: Toast['type']) => void;
@@ -33,17 +37,32 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [loading, setLoading] = useState(true);
   const [toasts, setToasts] = useState<Toast[]>([]);
   const [demoMode, setDemoModeState] = useState(isEnforcedMock());
+  const [theme, setTheme] = useState<'light' | 'dark'>(
+    (localStorage.getItem('ol_theme') as 'light' | 'dark') || 'dark'
+  );
+
+  // Apply theme attribute
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('ol_theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+  };
 
   // Bootstrap session from local storage
   useEffect(() => {
     const token = localStorage.getItem('ol_jwt_token');
     const role = localStorage.getItem('ol_user_role') as User['role'];
     const username = localStorage.getItem('ol_username');
+    const posLocation = localStorage.getItem('ol_pos_location') || undefined;
+    const name = localStorage.getItem('ol_name') || undefined;
 
     if (token && role && username) {
       // Dev customer ID hardcode matching backend dev@openloyalty.io ID
       const id = role === 'customer' ? '8f3b20cd-9d18-498c-8f19-3543d8a5712e' : undefined;
-      setUser({ username, role, id });
+      setUser({ username, role, id, posLocation, name });
     }
     setLoading(false);
 
@@ -68,7 +87,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setUser({
         username: res.username,
         role: role,
-        id
+        id,
+        posLocation: res.posLocation,
+        name: res.name
       });
       showToast(`Welcome back, ${username}!`, 'success');
     } catch (e: any) {
@@ -115,6 +136,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         loading,
         toasts,
         demoMode,
+        theme,
+        toggleTheme,
         login,
         logout,
         showToast,

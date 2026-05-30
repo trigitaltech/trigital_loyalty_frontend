@@ -1,0 +1,639 @@
+{
+  "nodes": [
+    {
+      "id": "eslint_config",
+      "label": "ESLint Project Linter Configuration",
+      "file_type": "document",
+      "source_file": "eslint.config.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Standardizes code quality rules across modern React and TypeScript files, using flat config structure."
+    },
+    {
+      "id": "package_json",
+      "label": "Project Manifest and Dependencies",
+      "file_type": "document",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Specifies dependencies including React 19, Vite 8, Lucide React, and React Router Dom 7."
+    },
+    {
+      "id": "tsconfig_json",
+      "label": "Root TypeScript Configuration",
+      "file_type": "document",
+      "source_file": "tsconfig.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Serves as the root configuration and delegates compilation rules to target specific project spaces via project references."
+    },
+    {
+      "id": "tsconfigapp_json",
+      "label": "Application TypeScript Configuration",
+      "file_type": "document",
+      "source_file": "tsconfig.app.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Optimizes bundle settings for browser environments, enforcing strict typechecking rules on src files."
+    },
+    {
+      "id": "tsconfignode_json",
+      "label": "Vite Node Environment TypeScript Configuration",
+      "file_type": "document",
+      "source_file": "tsconfig.node.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Isolates node execution types and target compiler settings for the Vite build system configuration."
+    },
+    {
+      "id": "viteconfig_config",
+      "label": "Vite Bundler Configuration",
+      "file_type": "document",
+      "source_file": "vite.config.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Integrates @vitejs/plugin-react for fast refresh compilation during local development."
+    },
+    {
+      "id": "main_entry",
+      "label": "Application Bootstrapping Entry Point",
+      "file_type": "code",
+      "source_file": "src/main.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Initializes React's StrictMode and mounts the core App component onto the root DOM element."
+    },
+    {
+      "id": "app_app",
+      "label": "App Root Shell and Router Component",
+      "file_type": "code",
+      "source_file": "src/App.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Establishes React Router v7 routes mapping client cockpits (Admin, Customer, POS Seller) under their respective layouts."
+    },
+    {
+      "id": "modal_component",
+      "label": "Modal Shared Dialog Component",
+      "file_type": "code",
+      "source_file": "src/components/Modal.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Encapsulates backdrop blur animation and handles focus, close buttons, and prevents background scrolling when overlay is active."
+    },
+    {
+      "id": "toast_container_component",
+      "label": "Toast Alert Center Container",
+      "file_type": "code",
+      "source_file": "src/components/Toast.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Subscribes to AuthContext notifications list and displays stackable, color-coded reactive alert prompts."
+    },
+    {
+      "id": "toast_item_component",
+      "label": "Toast Alert Item",
+      "file_type": "code",
+      "source_file": "src/components/Toast.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Renders alert icons and border accents depending on message types (success, info, warning, danger)."
+    },
+    {
+      "id": "authcontext_provider",
+      "label": "Authentication State Provider",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Centralizes session storage bootstrap, authentication states, global Toast dispatch events, and Mock database bypass switches."
+    },
+    {
+      "id": "authcontext_useauth",
+      "label": "Auth State Consumer Hook",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Exposes a custom hook ensuring safe consumption of session contexts inside layout and page widgets."
+    },
+    {
+      "id": "layouts_admin_layout",
+      "label": "Admin Cockpit Shell Layout",
+      "file_type": "code",
+      "source_file": "src/layouts/Layouts.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Implements the side panel navigation, mobile responsiveness toggle, top header controls, and verifies admin credentials."
+    },
+    {
+      "id": "layouts_customer_layout",
+      "label": "Customer Portal Shell Layout",
+      "file_type": "code",
+      "source_file": "src/layouts/Layouts.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Provides a top-navbar portal design, links Ledger and Redemptions catalogs, and gates access to customers."
+    },
+    {
+      "id": "layouts_seller_layout",
+      "label": "POS Merchant Terminal Shell Layout",
+      "file_type": "code",
+      "source_file": "src/layouts/Layouts.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Draws the cashier counter interface layout, connects historic receipt trails, and handles POS seller logins."
+    },
+    {
+      "id": "layouts_role_gate_check",
+      "label": "Role Verification Gate Check",
+      "file_type": "rationale",
+      "source_file": "src/layouts/Layouts.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Decoupled authentication safeguard design that intercepts unauthorized client sessions inside layout structures and navigates back to the Login screen with query params."
+    },
+    {
+      "id": "login_component",
+      "label": "Dynamic Login Page",
+      "file_type": "code",
+      "source_file": "src/pages/Login.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Switches themes, titles, and styles reactively depending on the targeted persona role parameter."
+    },
+    {
+      "id": "login_quickfill_mechanism",
+      "label": "Rapid Developer Testing Credentials Prefill",
+      "file_type": "rationale",
+      "source_file": "src/pages/Login.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Enables instant forms autofill based on the role parameters to facilitate faster development workflows and user testing."
+    },
+    {
+      "id": "unifiedhub_component",
+      "label": "Unified Cockpits Hub Selection Page",
+      "file_type": "code",
+      "source_file": "src/pages/UnifiedHub.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Displays modern neon glowing dashboard selector card widgets for Admin, Customer, and Seller access entries."
+    },
+    {
+      "id": "unifiedhub_db_toggle_mechanism",
+      "label": "Mock DB Bypass and Server Selector Switch",
+      "file_type": "rationale",
+      "source_file": "src/pages/UnifiedHub.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Provides visual toggle controls to alternate between static Mock DB testing environments and a live backend Server environment."
+    },
+    {
+      "id": "campaigns_admin_campaigns",
+      "label": "Admin Campaigns Catalog Table View",
+      "file_type": "code",
+      "source_file": "src/pages/admin/Campaigns.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Renders point costs, claimed statistics progress bars, stock indicator alerts, and handles fetch hooks."
+    },
+    {
+      "id": "campaigns_create_campaign_wizard",
+      "label": "Create Campaign Wizard Modal Form",
+      "file_type": "code",
+      "source_file": "src/pages/admin/Campaigns.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Manages input state for point cost validation and transforms comma-separated strings into a coupon array pool."
+    }
+  ],
+  "edges": [
+    {
+      "source": "tsconfig_json",
+      "target": "tsconfigapp_json",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tsconfig.json",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "tsconfig_json",
+      "target": "tsconfignode_json",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tsconfig.json",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "tsconfigapp_json",
+      "target": "viteconfig_config",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "tsconfig.app.json",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "tsconfignode_json",
+      "target": "viteconfig_config",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tsconfig.node.json",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "main_entry",
+      "target": "app_app",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/main.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "app_app",
+      "target": "authcontext_provider",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "app_app",
+      "target": "toast_container_component",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "app_app",
+      "target": "unifiedhub_component",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "app_app",
+      "target": "login_component",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "app_app",
+      "target": "layouts_admin_layout",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "app_app",
+      "target": "layouts_customer_layout",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "app_app",
+      "target": "layouts_seller_layout",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "toast_container_component",
+      "target": "toast_item_component",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Toast.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "toast_container_component",
+      "target": "authcontext_useauth",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Toast.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "authcontext_provider",
+      "target": "authcontext_useauth",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/context/AuthContext.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "layouts_admin_layout",
+      "target": "authcontext_useauth",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/layouts/Layouts.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "layouts_customer_layout",
+      "target": "authcontext_useauth",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/layouts/Layouts.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "layouts_seller_layout",
+      "target": "authcontext_useauth",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/layouts/Layouts.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "layouts_admin_layout",
+      "target": "layouts_role_gate_check",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/layouts/Layouts.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "layouts_customer_layout",
+      "target": "layouts_role_gate_check",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/layouts/Layouts.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "layouts_seller_layout",
+      "target": "layouts_role_gate_check",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/layouts/Layouts.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "login_component",
+      "target": "authcontext_useauth",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/Login.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "login_component",
+      "target": "login_quickfill_mechanism",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/Login.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "unifiedhub_component",
+      "target": "authcontext_useauth",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/UnifiedHub.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "unifiedhub_component",
+      "target": "unifiedhub_db_toggle_mechanism",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/UnifiedHub.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "campaigns_admin_campaigns",
+      "target": "authcontext_useauth",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/admin/Campaigns.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "campaigns_admin_campaigns",
+      "target": "modal_component",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/admin/Campaigns.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "campaigns_admin_campaigns",
+      "target": "campaigns_create_campaign_wizard",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/admin/Campaigns.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "modal_component",
+      "target": "toast_container_component",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/components/Modal.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "login_quickfill_mechanism",
+      "target": "unifiedhub_db_toggle_mechanism",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/pages/Login.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "layouts_role_gate_check",
+      "target": "login_component",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/layouts/Layouts.tsx",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "cockpit_role_based_routing",
+      "label": "Cockpit Role-Based Routing Architecture",
+      "nodes": [
+        "layouts_admin_layout",
+        "layouts_customer_layout",
+        "layouts_seller_layout",
+        "app_app",
+        "login_component"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx"
+    },
+    {
+      "id": "global_notification_alert_system",
+      "label": "Global Notification Alert System",
+      "nodes": [
+        "toast_container_component",
+        "toast_item_component",
+        "authcontext_provider",
+        "authcontext_useauth",
+        "app_app"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Toast.tsx"
+    },
+    {
+      "id": "mock_offline_demo_architectural_pattern",
+      "label": "Mock Offline Demo Architectural Pattern",
+      "nodes": [
+        "unifiedhub_db_toggle_mechanism",
+        "login_quickfill_mechanism",
+        "authcontext_provider"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/context/AuthContext.tsx"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -1,0 +1,430 @@
+{
+  "nodes": [
+    {
+      "id": "customers_admincustomers",
+      "label": "Admin Customers Component",
+      "file_type": "code",
+      "source_file": "src/pages/admin/Customers.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "dashboard_admindashboard",
+      "label": "Admin Dashboard Component",
+      "file_type": "code",
+      "source_file": "src/pages/admin/Dashboard.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "earningrules_adminearningrules",
+      "label": "Admin Earning Rules Component",
+      "file_type": "code",
+      "source_file": "src/pages/admin/EarningRules.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "segments_adminsegments",
+      "label": "Admin Segments Component",
+      "file_type": "code",
+      "source_file": "src/pages/admin/Segments.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "catalog_customercatalog",
+      "label": "Customer Catalog Component",
+      "file_type": "code",
+      "source_file": "src/pages/customer/Catalog.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "dashboard_customerdashboard",
+      "label": "Customer Dashboard Component",
+      "file_type": "code",
+      "source_file": "src/pages/customer/Dashboard.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "transactions_customertransactions",
+      "label": "Customer Transactions Component",
+      "file_type": "code",
+      "source_file": "src/pages/customer/Transactions.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "terminal_sellerterminal",
+      "label": "Seller Terminal Component",
+      "file_type": "code",
+      "source_file": "src/pages/seller/Terminal.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "transactions_sellertransactions",
+      "label": "Seller Transactions Component",
+      "file_type": "code",
+      "source_file": "src/pages/seller/Transactions.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "api_api",
+      "label": "API Client Service",
+      "file_type": "code",
+      "source_file": "src/services/api.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "mockapi_mockapi",
+      "label": "Mock API Service",
+      "file_type": "code",
+      "source_file": "src/services/mockApi.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "mockdata_mockdata",
+      "label": "Mock Database Seeds",
+      "file_type": "code",
+      "source_file": "src/services/mockData.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "index_html",
+      "label": "Vite Application Entrypoint HTML",
+      "file_type": "document",
+      "source_file": "index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md",
+      "label": "Development README Documentation",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "api_mock_fallback_pattern",
+      "label": "Mock Fallback Design Pattern",
+      "file_type": "rationale",
+      "source_file": "src/services/api.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Ensures offline capability and rapid frontend development in the absence of a running backend by dynamically falling back to client-side localStorage state upon failure."
+    },
+    {
+      "id": "tier_ladder_system",
+      "label": "Tier Ladder System Mechanism",
+      "file_type": "rationale",
+      "source_file": "src/services/mockApi.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Determines membership tier upgrades (Bronze, Silver, Gold) dynamically using point balance thresholds to incentivize customer transactions."
+    },
+    {
+      "id": "earning_rules_multiplier_mechanism",
+      "label": "Earning Rules Multiplier Mechanism",
+      "file_type": "rationale",
+      "source_file": "src/services/mockApi.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Calculates point deposits by evaluating active rules including spent-dollar ratios and product-SKU specific bonuses during cashier receipt uploads."
+    }
+  ],
+  "edges": [
+    {
+      "source": "customers_admincustomers",
+      "target": "api_api",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/admin/Customers.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "dashboard_admindashboard",
+      "target": "api_api",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/admin/Dashboard.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "earningrules_adminearningrules",
+      "target": "api_api",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/admin/EarningRules.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "segments_adminsegments",
+      "target": "api_api",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/admin/Segments.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "catalog_customercatalog",
+      "target": "api_api",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/customer/Catalog.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "dashboard_customerdashboard",
+      "target": "api_api",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/customer/Dashboard.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "transactions_customertransactions",
+      "target": "api_api",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/customer/Transactions.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "terminal_sellerterminal",
+      "target": "api_api",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/seller/Terminal.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "transactions_sellertransactions",
+      "target": "api_api",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/seller/Transactions.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "api_api",
+      "target": "mockapi_mockapi",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/services/api.ts",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "mockapi_mockapi",
+      "target": "mockdata_mockdata",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/services/mockApi.ts",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "api_mock_fallback_pattern",
+      "target": "api_api",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/services/api.ts",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "tier_ladder_system",
+      "target": "mockapi_mockapi",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/services/mockApi.ts",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "earning_rules_multiplier_mechanism",
+      "target": "mockapi_mockapi",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/services/mockApi.ts",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "dashboard_admindashboard",
+      "target": "dashboard_customerdashboard",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/pages/admin/Dashboard.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "transactions_customertransactions",
+      "target": "transactions_sellertransactions",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/pages/customer/Transactions.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "customers_admincustomers",
+      "target": "terminal_sellerterminal",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/pages/admin/Customers.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "terminal_sellerterminal",
+      "target": "earningrules_adminearningrules",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/pages/seller/Terminal.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "catalog_customercatalog",
+      "target": "segments_adminsegments",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/pages/customer/Catalog.tsx",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "admin_management_suite",
+      "label": "Admin Management Suite",
+      "nodes": [
+        "customers_admincustomers",
+        "dashboard_admindashboard",
+        "earningrules_adminearningrules",
+        "segments_adminsegments"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/pages/admin/Dashboard.tsx"
+    },
+    {
+      "id": "customer_loyalty_portal",
+      "label": "Customer Loyalty Portal",
+      "nodes": [
+        "catalog_customercatalog",
+        "dashboard_customerdashboard",
+        "transactions_customertransactions"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/pages/customer/Dashboard.tsx"
+    },
+    {
+      "id": "merchant_pos_terminal_actions",
+      "label": "Merchant POS Terminal Actions",
+      "nodes": [
+        "terminal_sellerterminal",
+        "transactions_sellertransactions",
+        "api_api"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/pages/seller/Terminal.tsx"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

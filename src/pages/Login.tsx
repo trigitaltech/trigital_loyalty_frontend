@@ -4,6 +4,7 @@ import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { ArrowLeft, Shield, User, Landmark, Key, Mail } from 'lucide-react';
 import suryaLogo from '../assets/Surya-Group-Logo.png';
+import { ThemeToggle } from '../components/ThemeToggle';
 
 export const Login: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -81,6 +82,11 @@ export const Login: React.FC = () => {
   return (
     <div style={containerStyle}>
       <div style={gridBackgroundStyle}></div>
+
+      {/* Floating Theme Toggle */}
+      <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', zIndex: 10 }}>
+        <ThemeToggle />
+      </div>
 
       {/* Floating Ambient Glow */}
       <div style={{

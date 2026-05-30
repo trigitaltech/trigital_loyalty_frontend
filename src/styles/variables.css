@@ -89,3 +89,16 @@
   --customer-primary-hex: #059669;
   --seller-primary-hex: #0f766e;
 }
+
+@keyframes rotateIn {
+  from { transform: rotate(-90deg) scale(0); opacity: 0; }
+  to { transform: rotate(0) scale(1); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.1); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+

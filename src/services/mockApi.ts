@@ -6,12 +6,14 @@ import {
   INITIAL_TRANSACTIONS,
   INITIAL_TRANSFERS,
   INITIAL_SEGMENTS,
+  INITIAL_SELLERS,
   EarningRule,
   Campaign,
   Customer,
   Transaction,
   PointTransfer,
-  Segment
+  Segment,
+  Seller
 } from './mockData';
 
 // Local storage keys
@@ -22,6 +24,7 @@ const KEYS = {
   TRANSACTIONS: 'ol_mock_transactions',
   TRANSFERS: 'ol_mock_transfers',
   SEGMENTS: 'ol_mock_segments',
+  SELLERS: 'ol_mock_sellers',
 };
 
 // Initialize Mock database
@@ -43,6 +46,9 @@ const initMockDb = () => {
   }
   if (!localStorage.getItem(KEYS.SEGMENTS)) {
     localStorage.setItem(KEYS.SEGMENTS, JSON.stringify(INITIAL_SEGMENTS));
+  }
+  if (!localStorage.getItem(KEYS.SELLERS)) {
+    localStorage.setItem(KEYS.SELLERS, JSON.stringify(INITIAL_SELLERS));
   }
 };
 
@@ -82,7 +88,26 @@ const updateSegmentsCustomerCount = () => {
 export const mockApi = {
   // --- AUTHENTICATION ---
   login: async (username: string, role: 'admin' | 'customer' | 'seller') => {
-    // Basic simulator
+    if (role === 'seller') {
+      const sellers = getDb<Seller>(KEYS.SELLERS);
+      const found = sellers.find(s => s.username === username);
+      if (!found) {
+        throw new Error('Cashier/POS username not found in database.');
+      }
+      if (!found.active) {
+        throw new Error('This cashier/POS account is inactive or deactivated.');
+      }
+      return {
+        token: `mock_jwt_seller_${Date.now()}`,
+        refresh_token: `mock_refresh_seller_${Date.now()}`,
+        username: found.username,
+        name: found.name,
+        posLocation: found.posLocation,
+        roles: ['ROLE_SELLER']
+      };
+    }
+
+    // Basic simulator for others
     return {
       token: `mock_jwt_${role}_${Date.now()}`,
       refresh_token: `mock_refresh_${role}_${Date.now()}`,
@@ -371,5 +396,33 @@ export const mockApi = {
   getSegments: async () => {
     updateSegmentsCustomerCount();
     return getDb<Segment>(KEYS.SEGMENTS);
+  },
+
+  // --- SELLERS / POS ---
+  getSellers: async () => {
+    return getDb<Seller>(KEYS.SELLERS);
+  },
+
+  createSeller: async (sellerData: Partial<Seller>) => {
+    const sellers = getDb<Seller>(KEYS.SELLERS);
+    const newSeller: Seller = {
+      id: `seller-${Date.now()}`,
+      username: sellerData.username || 'unknown',
+      password: sellerData.password || 'open',
+      name: sellerData.name || 'Anonymous POS',
+      posLocation: sellerData.posLocation || 'Main Store',
+      joinedAt: new Date().toISOString(),
+      active: true
+    };
+    sellers.push(newSeller);
+    setDb(KEYS.SELLERS, sellers);
+    return newSeller;
+  },
+
+  toggleSeller: async (id: string) => {
+    const sellers = getDb<Seller>(KEYS.SELLERS);
+    const updated = sellers.map(s => s.id === id ? { ...s, active: !s.active } : s);
+    setDb(KEYS.SELLERS, updated);
+    return updated.find(s => s.id === id);
   }
 };

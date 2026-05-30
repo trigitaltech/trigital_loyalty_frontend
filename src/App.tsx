@@ -12,6 +12,7 @@ import { AdminLayout, CustomerLayout, SellerLayout } from './layouts/Layouts';
 // Admin Cockpit Pages
 import { AdminDashboard } from './pages/admin/Dashboard';
 import { AdminCustomers } from './pages/admin/Customers';
+import { AdminSellers } from './pages/admin/Sellers';
 import { AdminEarningRules } from './pages/admin/EarningRules';
 import { AdminCampaigns } from './pages/admin/Campaigns';
 import { AdminSegments } from './pages/admin/Segments';
@@ -38,6 +39,7 @@ function App() {
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<AdminDashboard />} />
             <Route path="customers" element={<AdminCustomers />} />
+            <Route path="sellers" element={<AdminSellers />} />
             <Route path="rules" element={<AdminEarningRules />} />
             <Route path="campaigns" element={<AdminCampaigns />} />
             <Route path="segments" element={<AdminSegments />} />

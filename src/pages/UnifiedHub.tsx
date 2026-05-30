@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Shield, User, Landmark, Database, HelpCircle, ArrowRight } from 'lucide-react';
 import suryaLogo from '../assets/Surya-Group-Logo.png';
+import { ThemeToggle } from '../components/ThemeToggle';
 
 export const UnifiedHub: React.FC = () => {
   const navigate = useNavigate();
@@ -31,22 +32,25 @@ export const UnifiedHub: React.FC = () => {
           <span style={badgeStyle}>v2.0 React</span>
         </div>
 
-        <div style={connectionPanelStyle} className="glass-panel">
-          <Database size={15} color={demoMode ? 'var(--color-warning)' : 'var(--color-success)'} />
-          <span style={connectionLabelStyle}>
-            Database Mode: <strong style={{ color: demoMode ? 'var(--color-warning)' : 'var(--color-success)' }}>
-              {demoMode ? 'Offline Demo DB' : 'NestJS Server'}
-            </strong>
-          </span>
-          <button 
-            onClick={() => setDemoMode(!demoMode)} 
-            style={{
-              ...toggleButtonStyle,
-              backgroundColor: demoMode ? 'var(--color-success)' : 'var(--color-warning)',
-            }}
-          >
-            {demoMode ? 'Connect NestJS' : 'Enable Demo Mode'}
-          </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+          <div style={connectionPanelStyle} className="glass-panel">
+            <Database size={15} color={demoMode ? 'var(--color-warning)' : 'var(--color-success)'} />
+            <span style={connectionLabelStyle}>
+              Database Mode: <strong style={{ color: demoMode ? 'var(--color-warning)' : 'var(--color-success)' }}>
+                {demoMode ? 'Offline Demo DB' : 'NestJS Server'}
+              </strong>
+            </span>
+            <button 
+              onClick={() => setDemoMode(!demoMode)} 
+              style={{
+                ...toggleButtonStyle,
+                backgroundColor: demoMode ? 'var(--color-success)' : 'var(--color-warning)',
+              }}
+            >
+              {demoMode ? 'Connect NestJS' : 'Enable Demo Mode'}
+            </button>
+          </div>
+          <ThemeToggle />
         </div>
       </div>
 
@@ -55,7 +59,7 @@ export const UnifiedHub: React.FC = () => {
         <div style={headerAreaStyle}>
           <h1 style={titleStyle}>Surya Group Loyalty Cockpit</h1>
           <p style={subtitleStyle}>
-            Welcome to the fully upgraded React & TypeScript loyalty engine. Choose a cockpit below to manage rewards, credit purchases, and claim coupons.
+            Welcome to the african loyalty engine. Choose a cockpit below to manage rewards, credit purchases, and claim coupons.
           </p>
         </div>
 
